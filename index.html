@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>Web Components Test</title>
+
+        <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+        <link rel="stylesheet" href="/style.css" type="text/css" media="screen" title="no title" charset="utf-8">
+
+        <template id="person-card-tmpl">
+            <style type="text/css" media="screen">
+@import "https://unpkg.com/nes.css@latest/css/nes.min.css";
+            </style>
+            <div class="nes-container is-rounded">
+                <h3><slot class="nes-text is-primary" name="person-name">Person Name</slot></h3>
+                <p><slot class="nes-text" name="person-desc">Person Description</slot></p>
+            </div>
+        </template>
+
+        <template id="confirm-deny-tmpl">
+            <style type="text/css" media="screen">
+@import "https://unpkg.com/nes.css@latest/css/nes.min.css";
+.container {
+    display: block;
+    width: intrinsic;
+    width: -moz-max-content;
+    width: -webkit-max-content;
+}
+            </style>
+            <dialog class="container nes-container is-rounded">
+            <form method="dialog">
+                <label>
+                    <slot name=question-text">Is that true?</slot>
+                </label>
+                <menu>
+                    <button class="nes-btn" type="button"><slot name="confirm-text">Confirm</slot></button>
+                    <button class="nes-btn" type="button"><slot name="deny-text">Deny</slot></button>
+                </menu>
+            </form>
+            </dialog>
+        </template>
+    </head>
+    <body>
+        <header>
+            <h1>Employee Cards</h1>
+            <nav class="nes-container with-title">
+                <p class="title">Pages</p>
+                <a class="nes-badge" href="#">
+                    <span class="is-success">Employees</span>
+                </a>
+                <a class="nes-badge" href="./pokemon.html">
+                    <span class="is-primary">Pokemons</span>
+                </a>
+            </nav>
+        </header>
+        <section class="three-column">
+            <person-card>
+                <span slot="person-name">Alice Magorn</span>
+                <span slot="person-desc">CEO</span>
+            </person-card>
+            <person-card>
+                <span slot="person-name">Jeff Acornish</span>
+                <span slot="person-desc">Engineer</span>
+            </person-card>
+            <person-card>
+                <span slot="person-name">Brian Doran</span>
+                <span slot="person-desc">Writer</span>
+            </person-card>
+            <person-card>
+                <span slot="person-name">Cheryl Kim</span>
+                <span slot="person-desc">Frontend Developer</span>
+            </person-card>
+            <person-card>
+                <span slot="person-name">Jim Brown</span>
+                <span slot="person-desc">Assistant to the CEO</span>
+            </person-card>
+            <div class="nes-container is-rounded hidden" hidden>
+                <confirm-deny>
+                    <span slot="question-text">Continue?</span>
+                    <span slot="confirm-text">Yes</span>
+                    <span slot="deny-text">No</span>
+                </confirm-deny>
+            </div>
+        </section>
+        <footer>
+            <p>Made my Nathan</p>
+        </footer>
+        <script src="./main.js" type="module"> </script>
+    </body>
+</html>

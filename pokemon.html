@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>Pokemon Card View</title>
+
+        <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+        <link rel="stylesheet" href="/style.css" type="text/css" media="screen" title="no title" charset="utf-8">
+
+        <template id="poke-card-tmpl">
+            <style type="text/css" media="screen">
+@import "https://unpkg.com/nes.css@latest/css/nes.min.css";
+            </style>
+            <div class="nes-container is-rounded">
+                <h3 id="name"></h3>
+                <img id="front-image" src="" alt="Pokemon not loaded"/>
+            </div>
+        </template>
+    </head>
+    <body>
+        <header>
+            <h1>Pokemon Cards</h1>
+            <nav class="nes-container with-title">
+                <p class="title">Pages</p>
+                <a class="nes-badge" href="./">
+                    <span class="is-primary">Employees</span>
+                </a>
+                <a class="nes-badge" href="#">
+                    <span class="is-success">Pokemons</span>
+                </a>
+            </nav>
+        </header>
+        <section class="three-column" is="paginate-cards" src="https://pokeapi.co/api/v2/pokemon/?limit=6">
+        </section>
+        <footer>
+            <p>Made my Nathan</p>
+        </footer>
+        <script src="pokecard.js" type="module"></script>
+    </body>
+</html>

@@ -1,0 +1,31 @@
+header, footer, aside, nav, article, figure, figcaption {
+    display: block;
+}
+
+body {
+    margin: auto 5%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    grid-template-areas:
+        "h h h"
+        "s s s"
+        "f f f"
+}
+
+header {
+    grid-area: h;
+}
+
+footer {
+    grid-area: f;
+}
+
+section.three-column {
+    grid-area: s;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+}
+
