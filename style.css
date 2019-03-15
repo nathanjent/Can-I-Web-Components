@@ -9,7 +9,7 @@ body {
     grid-gap: 10px;
     grid-template-areas:
         "h h h"
-        "s s s"
+        "a s s"
         "f f f"
 }
 
@@ -21,6 +21,10 @@ footer {
     grid-area: f;
 }
 
+aside {
+    grid-area: a;
+}
+
 section.three-column {
     grid-area: s;
     display: grid;
@@ -29,3 +33,6 @@ section.three-column {
     grid-auto-rows: minmax(100px, auto);
 }
 
+.container-input {
+    margin-bottom: 10px;
+}

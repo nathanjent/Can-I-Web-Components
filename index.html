@@ -55,7 +55,7 @@
                 </a>
             </nav>
         </header>
-        <section class="three-column">
+        <section class="three-column" id="employeecards">
             <person-card>
                 <span slot="person-name">Alice Magorn</span>
                 <span slot="person-desc">CEO</span>
@@ -84,9 +84,22 @@
                 </confirm-deny>
             </div>
         </section>
+        <aside>
+            <div class="nes-container is-rounded">
+                <div class="nes-field container-input">
+                    <label for="namefield">Name</label> 
+                    <input class="nes-input" type="text" value="" name="namefield" id="namefield"/>
+                </div>
+                <div class="nes-field container-input">
+                    <label for="namefield">Occupation</label> 
+                    <input class="nes-input" type="text" value="" name="occupationfield" id="occupationfield"/>
+                </div>
+                <input class="nes-btn" type="button" value="Add Employee" name="AddEmployee"/>
+            </div>
+        </aside>
         <footer>
             <p>Made my Nathan</p>
         </footer>
-        <script src="./main.js" type="module"> </script>
+        <script src="./main.js" type="module"></script>
     </body>
 </html>
