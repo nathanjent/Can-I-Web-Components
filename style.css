@@ -5,12 +5,12 @@ header, footer, aside, nav, article, figure, figcaption {
 body {
     margin: auto 5%;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     grid-gap: 10px;
     grid-template-areas:
-        "h h h"
-        "a s s"
-        "f f f"
+        "h h h h h"
+        "a m m m m"
+        "f f f f f"
 }
 
 header {
@@ -23,14 +23,19 @@ footer {
 
 aside {
     grid-area: a;
+    display: grid;
+    grid-gap: 10px;
+}
+
+main {
+    grid-area: m;
 }
 
 section.three-column {
-    grid-area: s;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 10px;
-    grid-auto-rows: minmax(100px, auto);
+    grid-auto-rows: fit-content(100%)
 }
 
 .container-input {

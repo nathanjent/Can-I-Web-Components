@@ -22,20 +22,24 @@
     <body>
         <header>
             <h1>Pokemon Cards</h1>
+        </header>
+        <main>
+            <section class="three-column" is="paginate-cards" src="https://pokeapi.co/api/v2/pokemon/?limit=7">
+            </section>
+        </main>
+        <aside>
             <nav class="nes-container with-title">
                 <p class="title">Pages</p>
-                <a class="nes-badge" href="./">
+                <a class="nes-badge" href="./index.html">
                     <span class="is-primary">Employees</span>
                 </a>
                 <a class="nes-badge" href="#">
                     <span class="is-success">Pokemons</span>
                 </a>
+
+                <p>See also:</p>
+                <a href="https://pokeapi.co/" target="_blank"><i class="nes-ash"></i>PokeAPI</a>
             </nav>
-        </header>
-        <section class="three-column" is="paginate-cards" src="https://pokeapi.co/api/v2/pokemon/?limit=7">
-        </section>
-        <aside>
-            <a href="https://pokeapi.co/" target="_blank"><i class="nes-ash"></i>PokeAPI</a>
         </aside>
         <footer>
             <p>Made my Nathan</p>
